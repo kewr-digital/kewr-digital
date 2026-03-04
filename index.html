@@ -257,35 +257,38 @@
                     <h2 class="text-4xl font-bold text-white mb-6" data-i18n="pricing_title">Pricing Packages</h2>
                     <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-i18n="pricing_desc">Choose the package that suits your needs and budget</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 group/pricing">
                     <!-- Starter -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 hover:shadow-2xl cursor-pointer">
                         <h3 class="text-xl font-bold text-white mb-4" data-i18n="price_starter">Starter</h3>
-                        <div class="text-3xl font-bold text-white mb-6">Rp 5jt<span class="text-lg font-normal text-gray-500">/proyek</span> </div>
+                        <div class="text-sm text-gray-500 mb-1" data-i18n="price_start_from">mulai dari</div>
+                        <div class="text-3xl font-bold text-white mb-6"><span data-i18n="price_starter_val">Rp 5jt</span><span class="text-lg font-normal text-gray-500" data-i18n="price_period">/proyek</span> </div>
                         <ul class="space-y-4 mb-8 text-gray-400">
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_custom_domain">Custom Domain</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_responsive">Responsive Design</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_seo_basic">SEO Basic</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_email_support">Email Support</span></li>
                         </ul>
-                        <button class="open-consultation w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">Consultation</button>
+                        <button class="open-consultation w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" data-i18n="btn_choose_package">Choose Package</button>
                     </div>
                     <!-- Professional -->
-                    <div class="bg-white/10 backdrop-blur-xl border-2 border-white/30 rounded-2xl p-8 transform scale-105 shadow-2xl relative overflow-hidden">
+                    <div class="bg-white/10 backdrop-blur-xl border-2 border-white/30 rounded-2xl p-8 transition-all duration-300 relative scale-105 shadow-2xl group-hover/pricing:scale-100 group-hover/pricing:bg-white/5 group-hover/pricing:border-white/10 group-hover/pricing:shadow-none hover:!scale-105 hover:!bg-white/10 hover:!border-white/30 hover:!shadow-2xl cursor-pointer">
                         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm font-semibold">Popular</div>
                         <h3 class="text-xl font-bold text-white mb-4" data-i18n="price_pro">Professional</h3>
-                        <div class="text-3xl font-bold text-white mb-6">Rp 15jt<span class="text-lg font-normal text-gray-500">/proyek</span></div>
-                        <ul class="space-y-4 mb-8 text-white/80">
+                        <div class="text-sm text-gray-500 mb-1" data-i18n="price_start_from">mulai dari</div>
+                        <div class="text-3xl font-bold text-white mb-6"><span data-i18n="price_pro_val">Rp 15jt</span><span class="text-lg font-normal text-gray-500" data-i18n="price_period">/proyek</span></div>
+                        <ul class="space-y-4 mb-8 text-white/80 transition-colors duration-300 group-hover/pricing:text-gray-400 hover:!text-white/80">
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="feat_cms">CMS Integration</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="feat_speed">Speed Optimization</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="feat_priority">Priority Support</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> <span data-i18n="feat_custom_feat">Custom Features</span></li>
                         </ul>
-                        <button class="open-consultation w-full bg-white/90 backdrop-blur-md border border-white/20 text-black hover:bg-white hover:border-white/30 font-semibold py-3 px-6 rounded-lg transition-all duration-300">Choose Package</button>
+                        <button class="open-consultation w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" data-i18n="btn_choose_package">Choose Package</button>
                     </div>
                     <!-- Enterprise -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 hover:shadow-2xl cursor-pointer">
                         <h3 class="text-xl font-bold text-white mb-4" data-i18n="price_ent">Enterprise</h3>
+                        <div class="text-sm text-gray-500 mb-1" data-i18n="price_start_from">mulai dari</div>
                         <div class="text-3xl font-bold text-white mb-6">Custom</div>
                         <ul class="space-y-4 mb-8 text-gray-400">
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_mobile">Mobile App Design</span></li>
@@ -293,7 +296,7 @@
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_247">24/7 Support</span></li>
                             <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-white"></i> <span data-i18n="feat_unlimited">Unlimited Features</span></li>
                         </ul>
-                        <button class="open-consultation w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">Consultation</button>
+                        <button class="open-consultation w-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" data-i18n="btn_choose_package">Choose Package</button>
                     </div>
                 </div>
             </div>

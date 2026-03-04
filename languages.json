@@ -123,6 +123,26 @@
     "en": "Enterprise",
     "id": "Perusahaan"
   },
+  "price_starter_val": {
+    "en": "$350",
+    "id": "Rp 5jt"
+  },
+  "price_pro_val": {
+    "en": "$1,000",
+    "id": "Rp 15jt"
+  },
+  "price_period": {
+    "en": "/project",
+    "id": "/proyek"
+  },
+  "btn_choose_package": {
+    "en": "Choose Package",
+    "id": "Pilih Paket"
+  },
+  "price_start_from": {
+    "en": "start from",
+    "id": "mulai dari"
+  },
   "feat_custom_domain": {
     "en": "Custom Domain",
     "id": "Domain Kustom"

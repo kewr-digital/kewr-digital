@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = lang.toUpperCase();
         if (langText) langText.textContent = currentLang;
         
+        // Update localStorage
+        localStorage.setItem('locale', currentLang);
+        localStorage.setItem('locale_expiry', Date.now() + 24 * 60 * 60 * 1000);
+
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[key] && translations[key][lang.toLowerCase()]) {
@@ -64,6 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Load translations
             const langResponse = await fetch('languages.json');
             translations = await langResponse.json();
+
+            // Check cache
+            const cachedLocale = localStorage.getItem('locale');
+            const expiry = localStorage.getItem('locale_expiry');
+            
+            if (cachedLocale && expiry && Date.now() < parseInt(expiry)) {
+                console.log(`Using cached locale: ${cachedLocale}`);
+                applyTranslations(cachedLocale);
+                return;
+            }
 
             // Detect country via IP
             const ipResponse = await fetch('https://ipapi.co/json/');
