@@ -93,12 +93,17 @@ def compile_project():
     os.makedirs(os.path.join(dist_dir, 'js'), exist_ok=True)
     if os.path.exists('js'):
         for js_file in [f for f in os.listdir('js') if f.endswith('.js')]:
-            print(f"📦 Minifying js/{js_file}...")
-            with open(os.path.join('js', js_file), 'r') as f:
-                content = f.read()
-            minified = minify_js(content)
-            with open(os.path.join(dist_dir, 'js', js_file), 'w') as f:
-                f.write(minified)
+            # Skip minification for already minified libraries or large ones
+            if js_file.endswith('.min.js') or js_file == 'tailwindcss.js':
+                print(f"⏩ Copying js/{js_file} (skipping minification)...")
+                shutil.copy(os.path.join('js', js_file), os.path.join(dist_dir, 'js', js_file))
+            else:
+                print(f"📦 Minifying js/{js_file}...")
+                with open(os.path.join('js', js_file), 'r') as f:
+                    content = f.read()
+                minified = minify_js(content)
+                with open(os.path.join(dist_dir, 'js', js_file), 'w') as f:
+                    f.write(minified)
 
     # Process JSON (languages.json)
     if os.path.exists('languages.json'):
