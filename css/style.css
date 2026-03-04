@@ -10,16 +10,11 @@
  *   - Custom components (service-card, step-circle, icon-circle, etc.)
  */
 
-/* ── Geist — self-hosted, no external requests ── */
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 300; font-display: swap; src: url('../fonts/geist-300.woff2') format('woff2'); }
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/geist-400.woff2') format('woff2'); }
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/geist-500.woff2') format('woff2'); }
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/geist-600.woff2') format('woff2'); }
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/geist-700.woff2') format('woff2'); }
-@font-face { font-family: 'Geist'; font-style: normal; font-weight: 800; font-display: swap; src: url('../fonts/geist-800.woff2') format('woff2'); }
-
 /* ── Base: Dark theme overrides ── */
-html { scroll-behavior: smooth; font-family: 'Geist', sans-serif; }
+html { 
+    scroll-behavior: smooth; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Ubuntu", "Helvetica Neue", Arial, sans-serif; 
+}
 body { background: #1f2937; color: white; }   /* Bulma defaults: white bg, dark text */
 a { color: inherit; }                          /* Bulma sets accent blue */
 a:hover { color: white; }
