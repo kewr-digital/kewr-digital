@@ -1,36 +1,55 @@
-# kewr digital
+# Welcome to KEWR Digital 👋
 
-kewr digital is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+### 🚀 Premium Software House & Digital Architects
 
-## Getting started
+We specialize in building high-performance web applications, custom enterprise systems, and seamless digital experiences. With a passion for clean code and modern aesthetics, we turn complex problems into elegant solutions.
 
-To get started with this template, first install the npm dependencies:
+---
 
-```bash
-npm install
-```
+### 🎨 Our Philosophy (KEWR)
 
-Next, run the development server:
+- **K – Knowledge-Powered Technology**: Turning insight and data into high-value technology solutions.
+- **E – Engineered for Excellence**: Built with global engineering standards, precision, and scalable architecture.
+- **W – World-Connected Innovation**: Delivering digital solutions based on global standards with a strategic approach and competitive implementation in the international market.
+- **R – Resilient & Reliable Systems**: Tough, secure systems ready to grow with business expansion.
 
-```bash
-npm run dev
-```
+---
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+### 🛠 Tech Stack & Tools
 
-## Customizing
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | `HTML5`, `CSS3`, `JavaScript (ES6+)`, `Tailwind CSS`, `React`, `Vue.js` |
+| **Backend** | `Node.js`, `Go`, `Python` |
+| **Database** | `PostgreSQL`, `MongoDB`, `Redis` |
+| **DevOps** | `Docker`, `AWS`, `Google Cloud`, `CI/CD` |
+| **Design** | `Figma`, `Adobe XD` |
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+---
 
-## License
+### 🌟 Featured Project: KEWR Digital
+We recently completed a full static rewrite of the **[KEWR Digital](https://kewr.digital)** website, featuring:
+- **Custom i18n Engine**: Smart ID/EN switching with IP-based auto-detection.
+- **Performance Optimization**: 100% static delivery for lightning-fast speeds.
+- **Modern UI/UX**: Glassmorphism, responsive design, and smooth micro-animations.
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+---
 
-## Learn more
+### 📊 GitHub Stats
 
-To learn more about the technologies used in this site template, see the following resources:
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=[your-github-username]&show_icons=true&theme=tokyonight" alt="GitHub Stats" height="150" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=[your-github-username]&theme=tokyonight" alt="GitHub Streak" height="150" />
+</p>
 
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
-- [MDX](https://mdxjs.com/) - the official MDX documentation
+---
+
+### 📫 Connect with Us
+
+- 💼 **LinkedIn**: [linkedin.com/company/kewrdigital](https://linkedin.com/company/kewrdigital)
+- 📧 **Email**: [hello@kewr.digital](mailto:hello@kewr.digital)
+- 🌐 **Website**: [kewr.digital](https://kewr.digital)
+
+---
+
+> "Turning vision into clean, scalable, and beautiful digital reality." �✨

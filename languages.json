@@ -1,0 +1,374 @@
+{
+  "nav_home": {
+    "en": "Home",
+    "id": "Beranda"
+  },
+  "nav_about": {
+    "en": "About Us",
+    "id": "Tentang Kami"
+  },
+  "nav_services": {
+    "en": "Services",
+    "id": "Layanan"
+  },
+  "hero_title": {
+    "en": "Transform Your Business with Powerful Web Solutions",
+    "id": "Transformasikan Bisnis Anda dengan Solusi Web yang Kuat"
+  },
+  "hero_subtitle": {
+    "en": "We create custom websites, enterprise systems, and digital solutions that drive your business forward with cutting-edge technology.",
+    "id": "Kami membuat situs web kustom, sistem enterprise, dan solusi digital yang memajukan bisnis Anda dengan teknologi mutakhir."
+  },
+  "btn_consultation": {
+    "en": "Free Consultation",
+    "id": "Konsultasi Gratis"
+  },
+  "btn_portfolio": {
+    "en": "View Portfolio",
+    "id": "Lihat Portofolio"
+  },
+  "about_title": {
+    "en": "About Us",
+    "id": "Tentang Kami"
+  },
+  "about_desc": {
+    "en": "KEWR Digital is a trusted software house dedicated to delivering innovative digital solutions for your business transformation.",
+    "id": "KEWR Digital adalah software house terpercaya yang berdedikasi untuk memberikan solusi digital inovatif bagi transformasi bisnis Anda."
+  },
+  "vision_title": {
+    "en": "Our Vision",
+    "id": "Visi Kami"
+  },
+  "vision_text": {
+    "en": "We're not just building websites or apps; we're building the future. We envision ourselves as an essential partner in your digital evolution, crafting solutions that not only meet your present needs but also propel you towards your long-term goals.",
+    "id": "Kami tidak hanya membangun situs web atau aplikasi; kami membangun masa depan. Kami membayangkan diri kami sebagai mitra penting dalam evolusi digital Anda, menciptakan solusi yang tidak hanya memenuhi kebutuhan Anda saat ini tetapi juga mendorong Anda menuju tujuan jangka panjang Anda."
+  },
+  "values_title": {
+    "en": "Our Values",
+    "id": "Nilai Kami"
+  },
+  "values_text": {
+    "en": "Excellence, Integrity, Collaboration, and Passion - these aren't just words on a wall; they're the foundation of everything we do.",
+    "id": "Keunggulan, Integritas, Kolaborasi, dan Semangat - ini bukan sekadar kata-kata di dinding; itu adalah fondasi dari semua yang kami lakukan."
+  },
+  "mission_title": {
+    "en": "Our Mission",
+    "id": "Misi Kami"
+  },
+  "mission_text": {
+    "en": "To deliver cutting-edge technology with a personal approach, ensuring every client receives targeted and high-quality solutions.",
+    "id": "Menyediakan teknologi mutakhir dengan pendekatan personal, memastikan setiap klien menerima solusi yang tepat sasaran dan berkualitas tinggi."
+  },
+  "phil_title": {
+    "en": "The KEWR Philosophy",
+    "id": "Filosofi KEWR"
+  },
+  "phil_k_title": {
+    "en": "K – Knowledge-Powered Technology",
+    "id": "K – Knowledge-Powered Technology"
+  },
+  "phil_k_desc": {
+    "en": "Turning insight and data into high-value technology solutions.",
+    "id": "Mengubah insight dan data menjadi solusi teknologi bernilai tinggi."
+  },
+  "phil_e_title": {
+    "en": "E – Engineered for Excellence",
+    "id": "E – Engineered for Excellence"
+  },
+  "phil_e_desc": {
+    "en": "Built with global engineering standards, precision, and scalable architecture.",
+    "id": "Dibangun dengan standar engineering global, presisi, dan scalable architecture."
+  },
+  "phil_w_title": {
+    "en": "W – World-Connected Innovation",
+    "id": "W – World-Connected Innovation"
+  },
+  "phil_w_desc": {
+    "en": "Delivering digital solutions based on global standards with a strategic approach and competitive implementation in the international market.",
+    "id": "Menghadirkan solusi digital berbasis standar global dengan pendekatan strategis dan implementasi yang kompetitif di pasar internasional."
+  },
+  "phil_r_title": {
+    "en": "R – Resilient & Reliable Systems",
+    "id": "R – Resilient & Reliable Systems"
+  },
+  "phil_r_desc": {
+    "en": "Tough, secure systems ready to grow with business expansion.",
+    "id": "Sistem yang tangguh, aman, dan siap berkembang mengikuti pertumbuhan bisnis."
+  },
+  "services_title": {
+    "en": "Our Services",
+    "id": "Layanan Kami"
+  },
+  "services_desc": {
+    "en": "Complete digital solutions for all your business needs",
+    "id": "Solusi digital lengkap untuk semua kebutuhan bisnis Anda"
+  },
+  "pricing_title": {
+    "en": "Pricing Packages",
+    "id": "Paket Harga"
+  },
+  "pricing_desc": {
+    "en": "Choose the package that suits your needs and budget",
+    "id": "Pilih paket yang sesuai dengan kebutuhan dan anggaran Anda"
+  },
+  "price_starter": {
+    "en": "Starter",
+    "id": "Pemula"
+  },
+  "price_pro": {
+    "en": "Professional",
+    "id": "Profesional"
+  },
+  "price_ent": {
+    "en": "Enterprise",
+    "id": "Perusahaan"
+  },
+  "feat_custom_domain": {
+    "en": "Custom Domain",
+    "id": "Domain Kustom"
+  },
+  "feat_responsive": {
+    "en": "Responsive Design",
+    "id": "Desain Responsif"
+  },
+  "feat_seo_basic": {
+    "en": "SEO Basic",
+    "id": "SEO Dasar"
+  },
+  "feat_email_support": {
+    "en": "Email Support",
+    "id": "Dukungan Email"
+  },
+  "feat_cms": {
+    "en": "CMS Integration",
+    "id": "Integrasi CMS"
+  },
+  "feat_speed": {
+    "en": "Speed Optimization",
+    "id": "Optimasi Kecepatan"
+  },
+  "feat_priority": {
+    "en": "Priority Support",
+    "id": "Dukungan Prioritas"
+  },
+  "feat_custom_feat": {
+    "en": "Custom Features",
+    "id": "Fitur Kustom"
+  },
+  "feat_mobile": {
+    "en": "Mobile App Design",
+    "id": "Desain Aplikasi Mobile"
+  },
+  "feat_manager": {
+    "en": "Dedicated Manager",
+    "id": "Manajer Khusus"
+  },
+  "feat_247": {
+    "en": "24/7 Support",
+    "id": "Dukungan 24/7"
+  },
+  "feat_unlimited": {
+    "en": "Unlimited Features",
+    "id": "Fitur Tak Terbatas"
+  },
+  "faq_q1": {
+    "en": "What technologies do you use?",
+    "id": "Teknologi apa yang Anda gunakan?"
+  },
+  "faq_a1": {
+    "en": "We use modern technologies such as React, Vue, Node.js, and Go for development.",
+    "id": "Kami menggunakan teknologi modern seperti React, Vue, Node.js, dan Go untuk pengembangan."
+  },
+  "faq_q2": {
+    "en": "How long does a project take?",
+    "id": "Berapa lama waktu yang dibutuhkan untuk sebuah proyek?"
+  },
+  "faq_a2": {
+    "en": "Most projects take 4-8 weeks depending on complexity.",
+    "id": "Sebagian besar proyek membutuhkan waktu 4-8 minggu tergantung pada kompleksitasnya."
+  },
+  "faq_q3": {
+    "en": "Do you offer maintenance?",
+    "id": "Apakah Anda menawarkan pemeliharaan?"
+  },
+  "faq_a3": {
+    "en": "Yes, we offer ongoing maintenance and support for all our projects.",
+    "id": "Ya, kami menawarkan pemeliharaan dan dukungan berkelanjutan untuk semua proyek kami."
+  },
+  "faq_title": {
+    "en": "Frequently Asked Questions",
+    "id": "Pertanyaan yang Sering Diajukan"
+  },
+  "cta_title": {
+    "en": "Ready to Start Your Digital Project?",
+    "id": "Siap Memulai Proyek Digital Anda?"
+  },
+  "cta_desc": {
+    "en": "Consult your business needs with our expert team. Get the best digital solutions to grow your business.",
+    "id": "Konsultasikan kebutuhan bisnis Anda dengan tim ahli kami. Dapatkan solusi digital terbaik untuk mengembangkan bisnis Anda."
+  },
+  "serv_web_dev": {
+    "en": "Web Development",
+    "id": "Pengembangan Web"
+  },
+  "serv_web_dev_desc": {
+    "en": "Custom websites, e-commerce, and web applications with cutting-edge technology.",
+    "id": "Situs web kustom, e-commerce, dan aplikasi web dengan teknologi mutakhir."
+  },
+  "serv_uiux": {
+    "en": "UI/UX Design",
+    "id": "Desain UI/UX"
+  },
+  "serv_uiux_desc": {
+    "en": "Attractive interface design and optimal user experience.",
+    "id": "Desain antarmuka yang menarik dan pengalaman pengguna yang optimal."
+  },
+  "serv_erp": {
+    "en": "ERP System",
+    "id": "Sistem ERP"
+  },
+  "serv_erp_desc": {
+    "en": "Enterprise management system for business operational optimization.",
+    "id": "Sistem manajemen perusahaan untuk optimalisasi operasional bisnis."
+  },
+  "btn_see_all": {
+    "en": "See All Services",
+    "id": "Lihat Semua Layanan"
+  },
+  "serv_mobile": {
+    "en": "Mobile App",
+    "id": "Aplikasi Mobile"
+  },
+  "serv_saas": {
+    "en": "SaaS Solutions",
+    "id": "Solusi SaaS"
+  },
+  "serv_cloud": {
+    "en": "Cloud Solutions",
+    "id": "Solusi Cloud"
+  },
+  "serv_payment": {
+    "en": "Payment Systems",
+    "id": "Sistem Pembayaran"
+  },
+  "serv_maintenance": {
+    "en": "Maintenance",
+    "id": "Pemeliharaan"
+  },
+  "serv_mobile_desc": {
+    "en": "Native and hybrid mobile applications for iOS and Android.",
+    "id": "Aplikasi mobile native dan hybrid untuk iOS dan Android."
+  },
+  "serv_saas_desc": {
+    "en": "Software as a Service platform with subscription-based model and scalable architecture.",
+    "id": "Platform Software as a Service dengan model berbasis langganan dan arsitektur yang skalabel."
+  },
+  "serv_cloud_desc": {
+    "en": "Application migration and deployment to cloud infrastructure.",
+    "id": "Migrasi dan penerapan aplikasi ke infrastruktur cloud."
+  },
+  "serv_payment_desc": {
+    "en": "Secure payment gateway integration with enterprise-level security.",
+    "id": "Integrasi gateway pembayaran yang aman dengan keamanan tingkat perusahaan."
+  },
+  "serv_maintenance_desc": {
+    "en": "Comprehensive maintenance and support services with 24/7 monitoring.",
+    "id": "Layanan pemeliharaan dan dukungan komprehensif dengan pemantauan 24/7."
+  },
+  "btn_learn_more": {
+    "en": "Learn More →",
+    "id": "Pelajari Lebih Lanjut →"
+  },
+  "btn_show_less": {
+    "en": "Show Less ↑",
+    "id": "Tampilkan Sedikit ↑"
+  },
+  "modal_title": {
+    "en": "Software Development Consultation",
+    "id": "Konsultasi Pengembangan Perangkat Lunak"
+  },
+  "modal_desc": {
+    "en": "Tell us about your project needs, and we'll provide the best solution!",
+    "id": "Beri tahu kami tentang kebutuhan proyek Anda, dan kami akan memberikan solusi terbaik!"
+  },
+  "modal_placeholder": {
+    "en": "Example: I need an e-commerce website...",
+    "id": "Contoh: Saya butuh website e-commerce..."
+  },
+  "btn_cancel": {
+    "en": "Cancel",
+    "id": "Batal"
+  },
+  "btn_send": {
+    "en": "Send via WhatsApp",
+    "id": "Kirim via WhatsApp"
+  },
+  "proc_title": {
+    "en": "Our Work Process",
+    "id": "Proses Kerja Kami"
+  },
+  "proc_desc": {
+    "en": "Structured methodology for optimal results",
+    "id": "Metodologi terstruktur untuk hasil yang optimal"
+  },
+  "proc_consult": {
+    "en": "Consultation",
+    "id": "Konsultasi"
+  },
+  "proc_consult_desc": {
+    "en": "Requirements discussion and analysis",
+    "id": "Diskusi kebutuhan dan analisis"
+  },
+  "proc_design": {
+    "en": "Design",
+    "id": "Desain"
+  },
+  "proc_design_desc": {
+    "en": "Wireframe creation and UI/UX design",
+    "id": "Pembuatan wireframe dan desain UI/UX"
+  },
+  "proc_dev": {
+    "en": "Development",
+    "id": "Pengembangan"
+  },
+  "proc_dev_desc": {
+    "en": "Coding and feature implementation",
+    "id": "Coding dan implementasi fitur"
+  },
+  "proc_rev": {
+    "en": "Revision",
+    "id": "Revisi"
+  },
+  "proc_rev_desc": {
+    "en": "Testing and improvements",
+    "id": "Pengujian dan perbaikan"
+  },
+  "proc_launch": {
+    "en": "Launch",
+    "id": "Peluncuran"
+  },
+  "proc_launch_desc": {
+    "en": "Deployment and maintenance",
+    "id": "Penyebaran dan pemeliharaan"
+  },
+  "office_addr": {
+    "en": "Office Address",
+    "id": "Alamat Kantor"
+  },
+  "direct_contact": {
+    "en": "Direct Contact",
+    "id": "Kontak Langsung"
+  },
+  "email_addr": {
+    "en": "Email Address",
+    "id": "Alamat Email"
+  },
+  "email_support_text": {
+    "en": "Ready for 24/7 Support",
+    "id": "Siap untuk Dukungan 24/7"
+  },
+  "follow_us": {
+    "en": "Follow Us",
+    "id": "Ikuti Kami"
+  }
+}

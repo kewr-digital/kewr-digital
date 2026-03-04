@@ -1,0 +1,52 @@
+/* Custom styles for Kewr Digital */
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animations matching live site */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+}
+
+.animate-pulse {
+    animation: pulse-slow 8s infinite;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+/* Modal styles override */
+#login-modal, #consultation-modal {
+    transition: opacity 0.3s ease;
+}
+
+/* Drop shadow for text */
+.drop-shadow-lg {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .text-5xl {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
