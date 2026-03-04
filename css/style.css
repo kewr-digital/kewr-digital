@@ -1,52 +1,268 @@
-/* Custom styles for Kewr Digital */
+/*
+ * Kewr Digital — Custom CSS only.
+ *
+ * This file contains ONLY what Bulma does NOT provide:
+ *   - Dark theme base (background/color overrides)
+ *   - Glassmorphism (backdrop-filter — no Bulma equivalent)
+ *   - Dark navbar overrides (Bulma navbar is light-colored)
+ *   - Custom buttons with glassmorphism/dark colors
+ *   - Blob animations
+ *   - Custom components (service-card, step-circle, icon-circle, etc.)
+ */
 
-body {
-    scroll-behavior: smooth;
+/* ── Geist — self-hosted, no external requests ── */
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 300; font-display: swap; src: url('../fonts/geist-300.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 400; font-display: swap; src: url('../fonts/geist-400.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 500; font-display: swap; src: url('../fonts/geist-500.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 600; font-display: swap; src: url('../fonts/geist-600.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 700; font-display: swap; src: url('../fonts/geist-700.woff2') format('woff2'); }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 800; font-display: swap; src: url('../fonts/geist-800.woff2') format('woff2'); }
+
+/* ── Base: Dark theme overrides ── */
+html { scroll-behavior: smooth; font-family: 'Geist', sans-serif; }
+body { background: #1f2937; color: white; }   /* Bulma defaults: white bg, dark text */
+a { color: inherit; }                          /* Bulma sets accent blue */
+a:hover { color: white; }
+h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets colors via vars */
+
+/* ── Dark gradient page wrapper ── */
+.bg-dark {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+    position: relative;
 }
 
-/* Glassmorphism effects */
-.backdrop-blur-xl {
+/* ── Glassmorphism (backdrop-filter — not in Bulma) ── */
+.glass {
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 1rem;
+    transition: all 0.3s;
 }
-
-.backdrop-blur-md {
+.glass:hover {
+    background: rgba(255,255,255,0.10);
+    border-color: rgba(255,255,255,0.20);
+}
+.glass-md {
+    background: rgba(255,255,255,0.10);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.20);
+}
+.glass-featured {
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(24px);
+    border: 2px solid rgba(255,255,255,0.30);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.glass-featured:hover { transform: scale(1.08); }
+
+/* ── Dark navbar (overrides Bulma's light navbar) ── */
+.site-nav {
+    background: linear-gradient(90deg, #1f2937, #374151, #1f2937);
+    border-bottom: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+    position: sticky; top: 0; z-index: 50;
+}
+.site-nav, .site-nav .navbar-item, .site-nav .navbar-link { color: rgba(255,255,255,0.7); background: transparent; }
+.site-nav .navbar-item:hover, .site-nav .navbar-link:hover { background: rgba(255,255,255,0.10) !important; color: white; }
+.site-nav .navbar-item.is-active-page { color: white; border-bottom: 2px solid white; }
+.site-nav .navbar-burger span { background: rgba(255,255,255,0.8); }
+.site-nav .navbar-menu { background: transparent; }
+@media screen and (max-width: 1023px) {
+    .site-nav .navbar-menu { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.10); }
+    .site-nav .navbar-item.is-active-page { border-left: 4px solid white; border-bottom: none; background: rgba(255,255,255,0.15) !important; color: white; }
+    .site-nav .navbar-item:not(.is-active-page) { border-left: 4px solid transparent; }
 }
 
-/* Animations matching live site */
-@keyframes pulse-slow {
-    0%, 100% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.1); }
+/* ── Language switcher ── */
+.lang-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.10); backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.20); color: white;
+    border-radius: 6px; padding: 6px 12px;
+    font-size: 0.875rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s;
+}
+.lang-btn:hover { background: rgba(255,255,255,0.20); border-color: rgba(255,255,255,0.30); color: white; }
+
+/* ── Custom dark buttons (Bulma .button is light-colored) ── */
+.btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: rgba(255,255,255,0.90); color: black;
+    font-weight: 700; padding: 14px 32px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    cursor: pointer; transition: all 0.3s; text-decoration: none;
+}
+.btn-primary:hover { background: white; transform: scale(1.05); color: black; }
+
+.btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: rgba(255,255,255,0.05); color: white;
+    font-weight: 600; padding: 14px 32px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.10);
+    cursor: pointer; transition: all 0.3s; text-decoration: none;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white; }
+
+/* .btn-glass and .btn-white-sm use Bulma's is-fullwidth: display/width handled there */
+.btn-glass {
+    background: rgba(255,255,255,0.10); color: white;
+    font-weight: 600; padding: 12px 24px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.20);
+    cursor: pointer; transition: all 0.3s; margin-top: auto;
+    text-align: center;
+}
+.btn-glass:hover { background: rgba(255,255,255,0.20); border-color: rgba(255,255,255,0.30); color: white; }
+
+.btn-white-sm {
+    background: rgba(255,255,255,0.05); color: white;
+    font-size: 0.875rem; font-weight: 500; padding: 8px 16px;
+    border-radius: 8px; border: 1px solid rgba(255,255,255,0.20);
+    cursor: pointer; transition: all 0.2s; margin-top: 1rem;
+    text-align: center;
+}
+.btn-white-sm:hover { background: rgba(255,255,255,0.10); color: white; }
+
+/* ── Animated background blobs ── */
+.bg-blobs { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.blob { position: absolute; border-radius: 9999px; filter: blur(64px); animation: pulse-blob 8s infinite; }
+.blob-1 { top: 25%; left: 25%; width: 24rem; height: 24rem; background: rgba(255,255,255,0.05); }
+.blob-2 { bottom: 25%; right: 25%; width: 24rem; height: 24rem; background: rgba(255,255,255,0.03); animation-delay: 1000ms; }
+.blob-3 { top: 75%; left: 50%; width: 16rem; height: 16rem; background: rgba(255,255,255,0.04); animation-delay: 500ms; }
+@keyframes pulse-blob {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50%       { opacity: 1.0; transform: scale(1.08); }
 }
 
-.animate-pulse {
-    animation: pulse-slow 8s infinite;
+/* ── Page sections ── */
+/* 6rem padding — Bulma .section is only 3rem; hero needs full-height flex */
+.site-section { padding: 6rem 1.5rem; position: relative; z-index: 1; }
+.hero-section  { min-height: 100vh; display: flex; align-items: center; position: relative; z-index: 1; }
+
+/* ── Hero headline (Bulma title only goes to is-1 = 3rem) ── */
+.text-hero { font-size: 3rem; font-weight: 800; line-height: 1.1; }
+@media (min-width: 640px) { .text-hero { font-size: 4.5rem; } }
+
+/* ── Service cards ── */
+.service-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 0.75rem; padding: 1.5rem;
+    transition: all 0.3s; cursor: pointer; height: 100%;
+    display: flex; flex-direction: column;
+}
+.service-card:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); transform: scale(1.05); }
+.service-card:hover .card-icon { transform: scale(1.10); }
+.card-icon { transition: transform 0.3s; }
+
+/* ── Process step circles ── */
+.step-circle {
+    width: 4rem; height: 4rem;
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 9999px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem; position: relative;
+}
+.step-badge {
+    position: absolute; top: -8px; right: -8px;
+    width: 2rem; height: 2rem;
+    background: white; color: black;
+    border-radius: 9999px; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 0.875rem; font-weight: 700;
 }
 
-.delay-500 {
-    animation-delay: 500ms;
+/* ── Icon circles ── */
+.icon-circle {
+    width: 8rem; height: 8rem;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 9999px; display: flex;
+    align-items: center; justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+.icon-circle-sm {
+    width: 4rem; height: 4rem;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 9999px; display: flex;
+    align-items: center; justify-content: center;
+    margin: 0 auto; position: relative; z-index: 1;
 }
 
-.delay-1000 {
-    animation-delay: 1000ms;
+/* ── Dividers / timeline ── */
+.divider-gradient {
+    width: 6rem; height: 4px;
+    background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    border-radius: 9999px; margin: 0 auto 2rem;
+}
+.timeline-line {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    width: 4px; height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+    border-radius: 9999px;
 }
 
-/* Modal styles override */
-#login-modal, #consultation-modal {
-    transition: opacity 0.3s ease;
+/* ── KEWR letter accents ── */
+.letter-accent { font-size: 3rem; font-weight: 900; color: rgba(255,255,255,0.10); line-height: 1; transition: color 0.3s; }
+.glass:hover .letter-accent { color: rgba(255,255,255,0.20); }
+
+/* ── Pricing popular badge ── */
+.popular-badge {
+    position: absolute; top: -1rem; left: 50%; transform: translateX(-50%);
+    background: white; color: black;
+    padding: 4px 16px; border-radius: 9999px;
+    font-size: 0.875rem; font-weight: 600; white-space: nowrap;
 }
 
-/* Drop shadow for text */
-.drop-shadow-lg {
-    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2));
+/* ── Footer dark border (Bulma footer has no dark border) ── */
+.site-footer {
+    border-top: 1px solid rgba(255,255,255,0.10);
+    padding: 3rem 1rem;                  /* text-align → has-text-centered in HTML */
+    color: rgba(156,163,175,1);
+    position: relative; z-index: 1;
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-    .text-5xl {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
+/* ── Consultation modal ── */
+#consultation-modal {
+    display: none; position: fixed; inset: 0; z-index: 60;
+    align-items: center; justify-content: center; padding: 1rem;
 }
+#consultation-modal.is-open { display: flex; }
+.modal-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); cursor: pointer;
+}
+.modal-box {
+    position: relative;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 1rem; padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    max-width: 28rem; width: 100%;
+}
+.modal-textarea {
+    width: 100%; padding: 1rem;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 8px; color: white; resize: none; outline: none; transition: border-color 0.2s;
+}
+.modal-textarea::placeholder { color: rgba(107,114,128,1); }
+.modal-textarea:focus { border-color: rgba(255,255,255,0.30); }
+
+/* ── FAQ accordion (padding only — visibility via Bulma's is-hidden/is-open) ── */
+.faq-answer { display: none; padding: 0 1.5rem 1rem; }
+.faq-answer.is-open { display: block; }
+.faq-icon { font-size: 1.25rem; transition: transform 0.3s; }
+
+/* ── Image utilities ── */
+.img-cover { width: 100%; height: 20rem; object-fit: cover; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+.drop-shadow-logo { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); }
+.nav-logo  { height: 32px; width: auto; }
+.footer-logo { height: 32px; width: auto; opacity: 0.7; }

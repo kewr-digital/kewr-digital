@@ -4,165 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Kewr Digital</title>
-    <meta name="description" content="Learn about KEWR Digital, a leading software house dedicated to delivering innovative digital solutions. Discover our vision, values, and expert team.">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Learn about KEWR Digital, a leading software house dedicated to delivering innovative digital solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kewr.digital/about.html">
     <meta property="og:title" content="About Us | Kewr Digital">
     <meta property="og:description" content="Learn more about KEWR Digital's mission to drive your business forward with technology.">
     <meta property="og:image" content="https://kewr.digital/images/kewrlogo.png">
-
     <link rel="canonical" href="https://kewr.digital/about.html">
     <link rel="icon" type="image/png" href="images/kewrlogo.png">
-    <script src="js/tailwindcss.js"></script>
-    <script src="js/lucide.min.js"></script>
+    <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/lucide.min.js"></script>
 </head>
-<body class="bg-gray-800 font-sans">
-    
-    <!-- Navigation Bar -->
-    <nav class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 border-b border-white/20 shadow-lg w-full z-50 sticky top-0">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 justify-between">
-                <div class="flex">
-                    <div class="-ml-2 mr-2 flex items-center md:hidden">
-                        <button id="mobile-menu-button" aria-label="Toggle mobile menu" class="group relative inline-flex items-center justify-center rounded-md p-2 text-white/80 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white/50">
-                            <i data-lucide="menu" class="block h-6 w-6"></i>
-                            <i data-lucide="x" class="hidden h-6 w-6"></i>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar site-nav" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img alt="kewr logo" src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" width="128" height="32" class="nav-logo drop-shadow-logo">
+                </a>
+                <a role="button" class="navbar-burger" id="mobile-menu-button" aria-label="Toggle mobile menu" aria-expanded="false" data-target="mobile-menu">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="mobile-menu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item" data-i18n="nav_home">Home</a>
+                    <a href="about.html" class="navbar-item is-active-page" data-i18n="nav_about">About Us</a>
+                    <a href="services.html" class="navbar-item" data-i18n="nav_services">Services</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <button type="button" id="lang-switcher" class="lang-btn" aria-label="Switch Language">
+                            <span id="lang-text">EN</span>
+                            <i data-lucide="languages" style="width:16px;height:16px"></i>
                         </button>
                     </div>
-                    <div class="flex flex-shrink-0 items-center">
-                        <a href="index.html">
-                            <img alt="kewr logo" src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" width="128" height="32" class="h-8 w-auto drop-shadow-lg">
-                        </a>
-                    </div>
-                    <div class="hidden md:ml-6 md:flex md:space-x-8">
-                        <a href="index.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white/70 hover:border-white/50 hover:text-white transition-all duration-200" data-i18n="nav_home">Home</a>
-                        <a href="about.html" class="inline-flex items-center border-b-2 border-white px-1 pt-1 text-sm font-medium text-white transition-all duration-200" data-i18n="nav_about">About Us</a>
-                        <a href="services.html" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white/70 hover:border-white/50 hover:text-white transition-all duration-200" data-i18n="nav_services">Services</a>
-                    </div>
                 </div>
-                <div class="flex items-center text-white">
-                    <button type="button" id="lang-switcher" aria-label="Switch Language" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-2 text-sm font-semibold text-white shadow-lg hover:bg-white/20 hover:border-white/30 transition-all duration-200">
-                        <span id="lang-text">EN</span>
-                        <i data-lucide="languages" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white/5 backdrop-blur-md border-t border-white/10 text-white">
-            <div class="space-y-1 pb-3 pt-2">
-                <a href="index.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white/70 hover:bg-white/10 hover:text-white sm:pl-5 sm:pr-6">Home</a>
-                <a href="about.html" class="block border-l-4 border-white bg-white/20 py-2 pl-3 pr-4 text-base font-medium text-white sm:pl-5 sm:pr-6">About Us</a>
-                <a href="services.html" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white/70 hover:bg-white/10 hover:text-white sm:pl-5 sm:pr-6">Services</a>
             </div>
         </div>
     </nav>
 
-    <div class="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 text-white relative">
-        <!-- Background elements -->
-        <div class="fixed inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute top-3/4 left-1/2 w-64 h-64 bg-white/4 rounded-full blur-3xl animate-pulse delay-500"></div>
+    <div class="bg-dark">
+        <div class="bg-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
         </div>
 
-        <section class="py-24 relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-                    <div class="lg:col-span-1">
-                        <div class="relative">
-                            <img src="images/kewroffice.jpg" alt="KEWR Digital Office" width="800" height="600" class="w-full h-80 object-cover rounded-2xl shadow-2xl">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-2xl"></div>
+        <!-- About Intro -->
+        <section class="site-section">
+            <div class="container">
+                <div class="columns is-variable is-8 is-vcentered">
+                    <div class="column is-4">
+                        <div style="position:relative;">
+                            <img src="images/kewroffice.jpg" alt="KEWR Digital Office" width="800" height="600" class="img-cover">
+                            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(17,24,39,0.5),transparent);border-radius:1rem;"></div>
                         </div>
                     </div>
-                    <div class="lg:col-span-2">
-                        <div class="max-w-3xl">
-                            <h2 class="text-4xl font-bold text-white mb-8" data-i18n="about_title">About KEWR DIGITAL</h2>
-                            <div class="space-y-6">
-                                <p class="text-xl text-gray-300 leading-relaxed" data-i18n="about_desc">
-                                    We are more than just a digital company; we are a community of innovators committed to bringing your big ideas to life. United by collaboration and a shared vision, the KEWR DIGITAL team is here to empower your growth and success in the digital world.
-                                </p>
-                                <div class="space-y-4">
-                                    <div>
-                                        <h3 class="text-lg font-bold text-white mb-2">Software Developers</h3>
-                                        <p class="text-gray-400 leading-relaxed">
-                                            We build robust, scalable, and secure solutions. Every line of code is crafted to create systems that adapt and grow with your business.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-lg font-bold text-white mb-2">UI/UX Designers</h3>
-                                        <p class="text-gray-400 leading-relaxed">
-                                            We design intuitive and engaging digital experiences. For us, design is not just about aesthetics—it's about creating interactions that are simple, enjoyable, and meaningful.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-lg font-bold text-white mb-2">Project Managers</h3>
-                                        <p class="text-gray-400 leading-relaxed">
-                                            We keep your projects on track, on time, and within budget. With clear communication and strong strategies, we ensure every project doesn't just finish—it succeeds beyond expectations.
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="text-lg text-gray-300 leading-relaxed font-semibold">
-                                    At KEWR DIGITAL, we don't just deliver services—we build lasting partnerships. Let's innovate, collaborate, and turn your vision into impactful digital solutions.
-                                </p>
+                    <div class="column is-8">
+                        <h2 class="title is-3 has-text-white mb-5" data-i18n="about_title">About KEWR DIGITAL</h2>
+                        <p class="is-size-5 has-text-grey-lighter mb-5" style="line-height:1.8;" data-i18n="about_desc">
+                            We are more than just a digital company; we are a community of innovators committed to bringing your big ideas to life.
+                        </p>
+                        <div style="display:flex;flex-direction:column;gap:1rem;">
+                            <div>
+                                <h3 class="title is-5 has-text-white mb-2">Software Developers</h3>
+                                <p class="has-text-grey-light" style="line-height:1.8;">We build robust, scalable, and secure solutions. Every line of code is crafted to create systems that adapt and grow with your business.</p>
+                            </div>
+                            <div>
+                                <h3 class="title is-5 has-text-white mb-2">UI/UX Designers</h3>
+                                <p class="has-text-grey-light" style="line-height:1.8;">We design intuitive and engaging digital experiences. For us, design is not just about aesthetics—it's about creating interactions that are simple, enjoyable, and meaningful.</p>
+                            </div>
+                            <div>
+                                <h3 class="title is-5 has-text-white mb-2">Project Managers</h3>
+                                <p class="has-text-grey-light" style="line-height:1.8;">We keep your projects on track, on time, and within budget. With clear communication and strong strategies, we ensure every project succeeds beyond expectations.</p>
                             </div>
                         </div>
+                        <p class="is-size-5 has-text-grey-lighter has-text-weight-semibold mt-5">
+                            At KEWR DIGITAL, we don't just deliver services—we build lasting partnerships.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- KEWR Philosophy -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl font-bold text-white mb-6" data-i18n="phil_title">The KEWR Philosophy</h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-white/80 to-white/20 mx-auto rounded-full"></div>
+        <section class="site-section">
+            <div class="container">
+                <div class="has-text-centered mb-6">
+                    <h2 class="title is-3 has-text-white" data-i18n="phil_title">The KEWR Philosophy</h2>
+                    <div class="divider-gradient"></div>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- K -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-5xl font-black text-white/10 group-hover:text-white/20 transition-colors">K</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-3" data-i18n="phil_k_title">Knowledge-Powered Technology</h3>
-                                <p class="text-gray-400 leading-relaxed" data-i18n="phil_k_desc">Turning insight and data into high-value technology solutions.</p>
+                <div class="columns is-multiline">
+                    <div class="column is-6">
+                        <div class="glass" style="padding:2rem;">
+                            <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+                                <div class="letter-accent">K</div>
+                                <div><h3 class="title is-5 has-text-white mb-2" data-i18n="phil_k_title">Knowledge-Powered Technology</h3>
+                                <p class="has-text-grey-light" style="line-height:1.7;" data-i18n="phil_k_desc">Turning insight and data into high-value technology solutions.</p></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- E -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-5xl font-black text-white/10 group-hover:text-white/20 transition-colors">E</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-3" data-i18n="phil_e_title">Engineered for Excellence</h3>
-                                <p class="text-gray-400 leading-relaxed" data-i18n="phil_e_desc">Built with global engineering standards, precision, and scalable architecture.</p>
+                    <div class="column is-6">
+                        <div class="glass" style="padding:2rem;">
+                            <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+                                <div class="letter-accent">E</div>
+                                <div><h3 class="title is-5 has-text-white mb-2" data-i18n="phil_e_title">Engineered for Excellence</h3>
+                                <p class="has-text-grey-light" style="line-height:1.7;" data-i18n="phil_e_desc">Built with global engineering standards, precision, and scalable architecture.</p></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- W -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-5xl font-black text-white/10 group-hover:text-white/20 transition-colors">W</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-3" data-i18n="phil_w_title">World-Connected Innovation</h3>
-                                <p class="text-gray-400 leading-relaxed" data-i18n="phil_w_desc">Delivering digital solutions based on global standards with a strategic approach and competitive implementation in the international market.</p>
+                    <div class="column is-6">
+                        <div class="glass" style="padding:2rem;">
+                            <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+                                <div class="letter-accent">W</div>
+                                <div><h3 class="title is-5 has-text-white mb-2" data-i18n="phil_w_title">World-Connected Innovation</h3>
+                                <p class="has-text-grey-light" style="line-height:1.7;" data-i18n="phil_w_desc">Delivering digital solutions based on global standards with a strategic approach and competitive implementation in the international market.</p></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- R -->
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-5xl font-black text-white/10 group-hover:text-white/20 transition-colors">R</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white mb-3" data-i18n="phil_r_title">Resilient & Reliable Systems</h3>
-                                <p class="text-gray-400 leading-relaxed" data-i18n="phil_r_desc">Tough, secure systems ready to grow with business expansion.</p>
+                    <div class="column is-6">
+                        <div class="glass" style="padding:2rem;">
+                            <div style="display:flex;align-items:flex-start;gap:1.5rem;">
+                                <div class="letter-accent">R</div>
+                                <div><h3 class="title is-5 has-text-white mb-2" data-i18n="phil_r_title">Resilient &amp; Reliable Systems</h3>
+                                <p class="has-text-grey-light" style="line-height:1.7;" data-i18n="phil_r_desc">Tough, secure systems ready to grow with business expansion.</p></div>
                             </div>
                         </div>
                     </div>
@@ -170,58 +138,38 @@
             </div>
         </section>
 
-        <!-- Vision and Values -->
-        <section class="py-24 relative">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-white mb-6">Our Vision and Core Values</h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-white/80 to-white/20 mx-auto rounded-full"></div>
+        <!-- Vision & Values -->
+        <section class="site-section">
+            <div class="container">
+                <div class="has-text-centered mb-6">
+                    <h2 class="title is-3 has-text-white">Our Vision and Core Values</h2>
+                    <div class="divider-gradient"></div>
                 </div>
-                <div class="relative">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-white/20 to-white/5 rounded-full"></div>
-                    
-                    <!-- Vision -->
-                    <div class="relative mb-16">
-                        <div class="flex items-center justify-center mb-8">
-                            <div class="w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center relative z-10 text-white">
-                                <i data-lucide="target" class="w-8 h-8 text-white/80"></i>
-                            </div>
+                <div style="position:relative;">
+                    <div class="timeline-line"></div>
+                    <div style="position:relative;margin-bottom:4rem;">
+                        <div class="icon-circle-sm" style="margin-bottom:2rem;">
+                            <i data-lucide="target" style="width:32px;height:32px;color:rgba(255,255,255,0.8)"></i>
                         </div>
-                        <div class="max-w-4xl mx-auto text-center">
-                            <h3 class="text-3xl font-bold text-white mb-6" data-i18n="vision_title">Our Vision</h3>
-                            <p class="text-xl text-gray-300 leading-relaxed" data-i18n="vision_text">
-                                Our vision: We’re not just building websites or apps; we’re building the future. We envision ourselves as an essential partner in your digital evolution, crafting solutions that not only meet your present needs but also propel you towards your long-term goals.
+                        <div class="has-text-centered" style="max-width:56rem;margin:0 auto;">
+                            <h3 class="title is-4 has-text-white mb-4" data-i18n="vision_title">Our Vision</h3>
+                            <p class="is-size-5 has-text-grey-lighter" style="line-height:1.8;" data-i18n="vision_text">
+                                Our vision: We're not just building websites or apps; we're building the future. We envision ourselves as an essential partner in your digital evolution.
                             </p>
                         </div>
                     </div>
-
-                    <!-- Values -->
-                    <div class="relative">
-                        <div class="flex items-center justify-center mb-8">
-                            <div class="w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center relative z-10 text-white">
-                                <i data-lucide="rocket" class="w-8 h-8 text-white/80"></i>
-                            </div>
+                    <div style="position:relative;">
+                        <div class="icon-circle-sm" style="margin-bottom:2rem;">
+                            <i data-lucide="rocket" style="width:32px;height:32px;color:rgba(255,255,255,0.8)"></i>
                         </div>
-                        <div class="max-w-4xl mx-auto text-center">
-                            <h3 class="text-3xl font-bold text-white mb-6" data-i18n="values_title">Our Values</h3>
-                            <p class="text-xl text-gray-300 mb-10" data-i18n="values_text">These aren’t just words on a wall; they’re the foundation of everything we do.</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                                    <div class="text-2xl font-bold mb-3">Excellence</div>
-                                    <p class="text-gray-300">We don’t settle for good enough; we strive for exceptional results in every project, exceeding expectations and pushing the boundaries of what’s possible.</p>
-                                </div>
-                                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                                    <div class="text-2xl font-bold mb-3">Integrity</div>
-                                    <p class="text-gray-300">Transparency and honesty are the cornerstones of our partnerships. We operate with integrity in all our interactions, earning your trust and building long-lasting relationships.</p>
-                                </div>
-                                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                                    <div class="text-2xl font-bold mb-3">Collaboration</div>
-                                    <p class="text-gray-300">We believe in open communication and working hand-in-hand with our clients. We view ourselves as an extension of your team, fostering a collaborative environment where ideas flourish and success is shared.</p>
-                                </div>
-                                <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                                    <div class="text-2xl font-bold mb-3">Passion</div>
-                                    <p class="text-gray-300">We’re not just developers; we’re tech enthusiasts driven by a genuine passion for the transformative power of technology. This passion fuels our innovation and dedication to delivering remarkable solutions.</p>
-                                </div>
+                        <div class="has-text-centered" style="max-width:56rem;margin:0 auto;">
+                            <h3 class="title is-4 has-text-white mb-4" data-i18n="values_title">Our Values</h3>
+                            <p class="is-size-5 has-text-grey-lighter mb-6" data-i18n="values_text">These aren't just words on a wall; they're the foundation of everything we do.</p>
+                            <div class="columns is-multiline has-text-left">
+                                <div class="column is-6"><div class="glass" style="padding:1.5rem;"><div class="title is-5 has-text-white mb-2">Excellence</div><p class="has-text-grey-lighter" style="line-height:1.7;">We strive for exceptional results in every project, exceeding expectations.</p></div></div>
+                                <div class="column is-6"><div class="glass" style="padding:1.5rem;"><div class="title is-5 has-text-white mb-2">Integrity</div><p class="has-text-grey-lighter" style="line-height:1.7;">Transparency and honesty are the cornerstones of our partnerships.</p></div></div>
+                                <div class="column is-6"><div class="glass" style="padding:1.5rem;"><div class="title is-5 has-text-white mb-2">Collaboration</div><p class="has-text-grey-lighter" style="line-height:1.7;">We believe in open communication and working hand-in-hand with our clients.</p></div></div>
+                                <div class="column is-6"><div class="glass" style="padding:1.5rem;"><div class="title is-5 has-text-white mb-2">Passion</div><p class="has-text-grey-lighter" style="line-height:1.7;">We're tech enthusiasts driven by a genuine passion for transformative technology.</p></div></div>
                             </div>
                         </div>
                     </div>
@@ -229,52 +177,51 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="py-24 relative">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-white mb-6">Contact Us</h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">Ready to help bring your digital vision to life</p>
+        <!-- Contact -->
+        <section class="site-section">
+            <div class="container">
+                <div class="has-text-centered mb-6">
+                    <h2 class="title is-3 has-text-white">Contact Us</h2>
+                    <p class="subtitle is-5 has-text-grey-light">Ready to help bring your digital vision to life</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                        <div class="text-4xl mb-4"><i data-lucide="map-pin" class="w-10 h-10 text-white/80"></i></div>
-                        <h3 class="text-xl font-bold text-white mb-4" data-i18n="office_addr">Office Address</h3>
-                        <p class="text-gray-400 mb-4">Yogyakarta 55651<br>Indonesia</p>
-                        <p class="text-gray-500 text-sm">Monday - Thursday: 09:00 - 16:00 WIB<br>Friday: 08:00 - 12:00 WIB</p>
+                <div class="columns is-multiline">
+                    <div class="column is-6-tablet is-3-desktop">
+                        <div class="glass" style="padding:2rem;height:100%;">
+                            <div class="mb-4"><i data-lucide="map-pin" style="width:40px;height:40px;color:rgba(255,255,255,0.8)"></i></div>
+                            <h3 class="title is-5 has-text-white mb-3" data-i18n="office_addr">Office Address</h3>
+                            <p class="has-text-grey-light mb-3">Yogyakarta 55651<br>Indonesia</p>
+                            <p class="has-text-grey is-size-7">Mon–Thu: 09:00–16:00 WIB<br>Fri: 08:00–12:00 WIB</p>
+                        </div>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                        <div class="text-4xl mb-4"><i data-lucide="mail" class="w-10 h-10 text-white/80"></i></div>
-                        <h3 class="text-xl font-bold text-white mb-4" data-i18n="email_addr">Email Address</h3>
-                        <p class="text-gray-400 mb-4">hello@kewr.digital</p>
-                        <p class="text-white font-semibold" data-i18n="email_support_text">Ready for 24/7 Support</p>
+                    <div class="column is-6-tablet is-3-desktop">
+                        <div class="glass" style="padding:2rem;height:100%;">
+                            <div class="mb-4"><i data-lucide="mail" style="width:40px;height:40px;color:rgba(255,255,255,0.8)"></i></div>
+                            <h3 class="title is-5 has-text-white mb-3" data-i18n="email_addr">Email Address</h3>
+                            <p class="has-text-grey-light mb-3">hello@kewr.digital</p>
+                            <p class="has-text-white has-text-weight-semibold" data-i18n="email_support_text">Ready for 24/7 Support</p>
+                        </div>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                        <div class="text-4xl mb-4"><i data-lucide="phone" class="w-10 h-10 text-white/80"></i></div>
-                        <h3 class="text-xl font-bold text-white mb-4" data-i18n="direct_contact">Direct Contact</h3>
-                        <div class="space-y-3">
-                            <div>
-                                <p class="text-gray-400">WhatsApp / Phone:</p>
-                                <p class="text-white font-semibold">+62 822-2121-3199</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Email:</p>
-                                <p class="text-white font-semibold">hello@kewr.digital</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">Website:</p>
-                                <p class="text-white font-semibold">kewr.digital</p>
+                    <div class="column is-6-tablet is-3-desktop">
+                        <div class="glass" style="padding:2rem;height:100%;">
+                            <div class="mb-4"><i data-lucide="phone" style="width:40px;height:40px;color:rgba(255,255,255,0.8)"></i></div>
+                            <h3 class="title is-5 has-text-white mb-3" data-i18n="direct_contact">Direct Contact</h3>
+                            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                                <p class="has-text-grey-light">WhatsApp:</p><p class="has-text-white has-text-weight-semibold">+62 822-2121-3199</p>
+                                <p class="has-text-grey-light">Email:</p><p class="has-text-white has-text-weight-semibold">hello@kewr.digital</p>
+                                <p class="has-text-grey-light">Website:</p><p class="has-text-white has-text-weight-semibold">kewr.digital</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                        <div class="text-4xl mb-4"><i data-lucide="globe" class="w-10 h-10 text-white/80"></i></div>
-                        <h3 class="text-xl font-bold text-white mb-4" data-i18n="follow_us">Follow Us</h3>
-                        <div class="space-y-4">
-                            <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300"><i data-lucide="facebook" class="w-5 h-5"></i><span>Facebook: KEWR Digital</span></a>
-                            <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300"><i data-lucide="instagram" class="w-5 h-5"></i><span>Instagram: @kewrdigital</span></a>
-                            <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300"><i data-lucide="linkedin" class="w-5 h-5"></i><span>LinkedIn: KEWR Digital</span></a>
-                            <a href="#" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300"><i data-lucide="twitter" class="w-5 h-5"></i><span>Twitter: @kewrdigital</span></a>
+                    <div class="column is-6-tablet is-3-desktop">
+                        <div class="glass" style="padding:2rem;height:100%;">
+                            <div class="mb-4"><i data-lucide="globe" style="width:40px;height:40px;color:rgba(255,255,255,0.8)"></i></div>
+                            <h3 class="title is-5 has-text-white mb-3" data-i18n="follow_us">Follow Us</h3>
+                            <div style="display:flex;flex-direction:column;gap:1rem;">
+                                <a href="#" class="has-text-grey-light" style="display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="facebook" style="width:20px;height:20px"></i><span>KEWR Digital</span></a>
+                                <a href="#" class="has-text-grey-light" style="display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="instagram" style="width:20px;height:20px"></i><span>@kewrdigital</span></a>
+                                <a href="#" class="has-text-grey-light" style="display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="linkedin" style="width:20px;height:20px"></i><span>KEWR Digital</span></a>
+                                <a href="#" class="has-text-grey-light" style="display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="twitter" style="width:20px;height:20px"></i><span>@kewrdigital</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,31 +229,29 @@
         </section>
 
         <!-- Footer -->
-        <footer class="py-12 border-t border-white/10 relative z-10 text-center text-gray-400">
-            <div class="mx-auto max-w-7xl px-4">
-                <div class="mb-8">
-                    <img src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" alt="kewr logo" class="h-8 w-auto mx-auto mb-4 opacity-70">
-                    <p>© 2024 KEWR Digital. Indonesia. All rights reserved.</p>
-                </div>
+        <footer class="site-footer has-text-centered">
+            <div class="container">
+                <img src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" alt="kewr logo" class="footer-logo" style="margin:0 auto 1rem;">
+                <p>&copy; 2024 KEWR Digital. Indonesia. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
-
     <!-- Consultation Modal -->
-    <div id="consultation-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm modal-close"></div>
-        <div class="relative bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-2xl max-w-md w-full">
-            <h3 class="text-xl font-bold text-white mb-6" data-i18n="modal_title">Software Development Consultation</h3>
-            <p class="text-gray-400 text-sm mb-4" data-i18n="modal_desc">Tell us about your project needs, and we'll provide the best solution!</p>
-            <textarea id="whatsapp-message" class="w-full p-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-200 resize-none" data-i18n="modal_placeholder" placeholder="Example: I need an e-commerce website..." rows="4"></textarea>
-            <div class="mt-6 flex justify-end gap-3">
-                <button class="modal-close bg-white/5 text-white hover:bg-white/10 px-6 py-3 rounded-lg transition-all" data-i18n="btn_cancel">Cancel</button>
-                <button id="send-whatsapp" class="bg-white/90 text-black font-semibold px-6 py-3 rounded-lg hover:bg-white transition-all shadow-lg" data-i18n="btn_send">Send via WhatsApp</button>
+    <div id="consultation-modal">
+        <div class="modal-backdrop modal-close"></div>
+        <div class="modal-box">
+            <h3 class="title is-5 has-text-white mb-4" data-i18n="modal_title">Software Development Consultation</h3>
+            <p class="is-size-7 has-text-grey-light mb-4" data-i18n="modal_desc">Tell us about your project needs, and we'll provide the best solution!</p>
+            <textarea id="whatsapp-message" class="modal-textarea" data-i18n="modal_placeholder" placeholder="Example: I need an e-commerce website..." rows="4"></textarea>
+            <div class="mt-5" style="display:flex;justify-content:flex-end;gap:0.75rem;">
+                <button class="btn-secondary modal-close" style="padding:10px 20px;" data-i18n="btn_cancel">Cancel</button>
+                <button id="send-whatsapp" class="btn-primary" style="padding:10px 20px;" data-i18n="btn_send">Send via WhatsApp</button>
             </div>
         </div>
     </div>
 
+    <script src="js/languages.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

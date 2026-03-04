@@ -4,20 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle (Bulma navbar)
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const menuIcon = mobileMenuButton.querySelector('[data-lucide="menu"]');
-            const xIcon = mobileMenuButton.querySelector('[data-lucide="x"]');
-            if (menuIcon && xIcon) {
-                menuIcon.classList.toggle('hidden');
-                xIcon.classList.toggle('hidden');
-                // Re-init icons to handle visibility change if needed
-                lucide.createIcons();
-            }
+            mobileMenuButton.classList.toggle('is-active');
+            mobileMenu.classList.toggle('is-active');
         });
     }
 
@@ -26,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById(modalId);
         if (modal) {
             if (show) {
-                modal.classList.remove('hidden');
+                modal.classList.add('is-open');
                 document.body.style.overflow = 'hidden';
             } else {
-                modal.classList.add('hidden');
+                modal.classList.remove('is-open');
                 document.body.style.overflow = 'auto';
             }
         }
@@ -65,9 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const initLanguage = async () => {
         try {
-            // Load translations
-            const langResponse = await fetch('languages.json');
-            translations = await langResponse.json();
+            // Check if translations were already loaded via script
+            if (window.translations) {
+                translations = window.translations;
+            } else {
+                // Fallback for development if not compiled
+                const langResponse = await fetch('languages.json');
+                translations = await langResponse.json();
+            }
 
             // Check cache
             const cachedLocale = localStorage.getItem('locale');
@@ -108,18 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close Modals
     document.querySelectorAll('.modal-close').forEach(closeEl => {
         closeEl.addEventListener('click', (e) => {
-            // Check if it's the backdrop or the close button
             const modal = e.target.closest('[id$="-modal"]');
-            if (modal && (e.target.classList.contains('modal-close') || e.target.textContent === '×')) {
-                toggleModal(modal.id, false);
-            }
+            if (modal) toggleModal(modal.id, false);
         });
     });
 
     // Close on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            const openModal = document.querySelector('[id$="-modal"]:not(.hidden)');
+            const openModal = document.querySelector('[id$="-modal"].is-open');
             if (openModal) toggleModal(openModal.id, false);
         }
     });
@@ -142,14 +137,14 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const answer = button.nextElementSibling;
             const icon = button.querySelector('.faq-icon');
-            const isOpen = !answer.classList.contains('hidden');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+            const isOpen = answer.classList.contains('is-open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('is-open'));
             document.querySelectorAll('.faq-icon').forEach(el => el.textContent = '+');
 
             if (!isOpen) {
-                answer.classList.remove('hidden');
+                answer.classList.add('is-open');
                 icon.textContent = '-';
             }
         });
@@ -162,11 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (learnMoreBtn && featuresList) {
             learnMoreBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                featuresList.classList.toggle('hidden');
-                const isHidden = featuresList.classList.contains('hidden');
+                featuresList.classList.toggle('is-hidden');
+                const isHidden = featuresList.classList.contains('is-hidden');
                 const btnKey = isHidden ? 'btn_learn_more' : 'btn_show_less';
                 learnMoreBtn.setAttribute('data-i18n', btnKey);
-                if (translations[btnKey]) {
+                if (translations[btnKey] && translations[btnKey][currentLang.toLowerCase()]) {
                     learnMoreBtn.textContent = translations[btnKey][currentLang.toLowerCase()];
                 }
             });
