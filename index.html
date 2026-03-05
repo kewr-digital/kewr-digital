@@ -24,7 +24,7 @@
     <link rel="canonical" href="https://kewr.digital/">
     <link rel="icon" type="image/png" href="images/kewrlogo.png">
 
-    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/lucide.min.js"></script>
 </head>
@@ -53,7 +53,7 @@
                     <div class="navbar-item">
                         <button type="button" id="lang-switcher" class="lang-btn" aria-label="Switch Language">
                             <span id="lang-text">EN</span>
-                            <i data-lucide="languages" class="w-4 h-4"></i>
+                            <i data-lucide="languages" style="width:16px;height:16px"></i>
                         </button>
                     </div>
                 </div>
@@ -71,11 +71,11 @@
 
         <!-- Hero Section -->
         <section class="hero-section">
-            <div class="container has-text-centered" style="position:relative;z-index:1;padding:6rem 1.5rem;">
+            <div class="container has-text-centered py-6 px-5" style="position:relative;z-index:1;">
                 <h1 class="text-hero has-text-white mb-4" data-i18n="hero_title">
                     Transform Your Business with <span class="is-block has-text-grey-lighter">Powerful Web Solutions</span>
                 </h1>
-                <p class="is-size-5 has-text-grey-light mb-6" style="max-width:48rem;margin-left:auto;margin-right:auto;" data-i18n="hero_subtitle">
+                <p class="is-size-5 has-text-grey-light mb-6 mx-auto" style="max-width:48rem;" data-i18n="hero_subtitle">
                     We create custom websites, enterprise systems, and digital solutions that drive your business forward with cutting-edge technology.
                 </p>
                 <div class="buttons is-centered mt-6">
@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="has-text-centered mb-6">
                     <h2 class="title is-3 has-text-white" data-i18n="about_title">About Us</h2>
-                    <p class="subtitle is-5 has-text-grey-light" style="max-width:48rem;margin:0 auto;" data-i18n="about_desc">
+                    <p class="subtitle is-5 has-text-grey-light mx-auto" style="max-width:48rem;" data-i18n="about_desc">
                         KEWR Digital is a trusted software house dedicated to delivering innovative digital solutions for your business transformation.
                     </p>
                 </div>
@@ -115,34 +115,34 @@
                                 <p class="has-text-grey-light mb-4" data-i18n="values_text">
                                     Excellence, Integrity, Collaboration, and Passion - these aren't just words on a wall; they're the foundation of everything we do.
                                 </p>
-                                <div class="columns is-multiline is-2">
+                                <div class="columns is-multiline is-variable is-2">
                                     <div class="column is-6">
-                                        <div class="glass" style="padding:1rem;">
-                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2" style="display:flex;align-items:center;gap:8px;">
+                                        <div class="glass p-4">
+                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2 is-flex is-align-items-center" style="gap:8px;">
                                                 <i data-lucide="target" style="width:20px;height:20px"></i> Excellence
                                             </h4>
                                             <p class="has-text-grey-light is-size-7">Exceptional results in every project</p>
                                         </div>
                                     </div>
                                     <div class="column is-6">
-                                        <div class="glass" style="padding:1rem;">
-                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2" style="display:flex;align-items:center;gap:8px;">
+                                        <div class="glass p-4">
+                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2 is-flex is-align-items-center" style="gap:8px;">
                                                 <i data-lucide="zap" style="width:20px;height:20px"></i> Innovation
                                             </h4>
                                             <p class="has-text-grey-light is-size-7">Cutting-edge technology solutions</p>
                                         </div>
                                     </div>
                                     <div class="column is-6">
-                                        <div class="glass" style="padding:1rem;">
-                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2" style="display:flex;align-items:center;gap:8px;">
+                                        <div class="glass p-4">
+                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2 is-flex is-align-items-center" style="gap:8px;">
                                                 <i data-lucide="focus" style="width:20px;height:20px"></i> Focus
                                             </h4>
                                             <p class="has-text-grey-light is-size-7">Targeted solutions</p>
                                         </div>
                                     </div>
                                     <div class="column is-6">
-                                        <div class="glass" style="padding:1rem;">
-                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2" style="display:flex;align-items:center;gap:8px;">
+                                        <div class="glass p-4">
+                                            <h4 class="has-text-white is-size-6 has-text-weight-semibold mb-2 is-flex is-align-items-center" style="gap:8px;">
                                                 <i data-lucide="fast-forward" style="width:20px;height:20px"></i> Speed
                                             </h4>
                                             <p class="has-text-grey-light is-size-7">Rapid development</p>
@@ -159,8 +159,8 @@
                         </div>
                     </div>
                     <div class="column is-6">
-                        <div class="glass" style="padding:2rem;text-align:center;">
-                            <div class="icon-circle">
+                        <div class="glass p-5 has-text-centered">
+                            <div class="icon-circle mb-4 mx-auto" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.05);border-radius:50%;">
                                 <i data-lucide="users" style="width:56px;height:56px;color:rgba(255,255,255,0.8)"></i>
                             </div>
                             <h4 class="title is-5 has-text-white">Expert Team</h4>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="columns is-multiline">
                     <div class="column is-12-mobile is-4-tablet">
-                        <div class="glass" style="padding:2rem;text-align:left;height:100%;">
+                        <div class="glass p-5 has-text-left" style="height:100%;">
                             <div class="mb-4"><i data-lucide="globe" style="width:32px;height:32px"></i></div>
                             <h3 class="title is-5 has-text-white" data-i18n="serv_web_dev">Web Development</h3>
                             <p class="has-text-grey-light mb-4" data-i18n="serv_web_dev_desc">Custom websites, e-commerce, and web applications with cutting-edge technology.</p>
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                     <div class="column is-12-mobile is-4-tablet">
-                        <div class="glass" style="padding:2rem;text-align:left;height:100%;">
+                        <div class="glass p-5 has-text-left" style="height:100%;">
                             <div class="mb-4"><i data-lucide="palette" style="width:32px;height:32px"></i></div>
                             <h3 class="title is-5 has-text-white" data-i18n="serv_uiux">UI/UX Design</h3>
                             <p class="has-text-grey-light mb-4" data-i18n="serv_uiux_desc">Attractive interface design and optimal user experience.</p>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <div class="column is-12-mobile is-4-tablet">
-                        <div class="glass" style="padding:2rem;text-align:left;height:100%;">
+                        <div class="glass p-5 has-text-left" style="height:100%;">
                             <div class="mb-4"><i data-lucide="building" style="width:32px;height:32px"></i></div>
                             <h3 class="title is-5 has-text-white" data-i18n="serv_erp">ERP System</h3>
                             <p class="has-text-grey-light mb-4" data-i18n="serv_erp_desc">Enterprise management system for business operational optimization.</p>
@@ -237,46 +237,46 @@
                 <div class="columns is-variable is-6">
                     <!-- Starter -->
                     <div class="column is-4">
-                        <div class="glass" style="padding:2rem;height:100%;display:flex;flex-direction:column;">
+                        <div class="glass p-5 is-flex is-flex-direction-column" style="height:100%;">
                             <h3 class="title is-5 has-text-white" data-i18n="price_starter">Starter</h3>
                             <p class="is-size-7 has-text-grey mb-1" data-i18n="price_start_from">mulai dari</p>
                             <p class="title is-4 has-text-white mb-5"><span data-i18n="price_starter_val">Rp 5jt</span><span class="is-size-6 has-text-weight-normal has-text-grey" data-i18n="price_period">/proyek</span></p>
-                            <ul class="has-text-grey-light mb-5" style="line-height:2.2;flex:1;">
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_custom_domain">Custom Domain</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_responsive">Responsive Design</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_seo_basic">SEO Basic</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_email_support">Email Support</span></li>
+                            <ul class="has-text-grey-light mb-5 is-flex-grow-1" style="line-height:2.2;">
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_custom_domain">Custom Domain</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_responsive">Responsive Design</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_seo_basic">SEO Basic</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_email_support">Email Support</span></li>
                             </ul>
                             <button class="btn-glass is-fullwidth open-consultation" data-i18n="btn_choose_package">Choose Package</button>
                         </div>
                     </div>
                     <!-- Professional -->
                     <div class="column is-4">
-                        <div class="glass-featured" style="padding:2rem;height:100%;display:flex;flex-direction:column;position:relative;">
+                        <div class="glass-featured p-5 is-flex is-flex-direction-column" style="height:100%;position:relative;">
                             <div class="popular-badge">Popular</div>
                             <h3 class="title is-5 has-text-white" data-i18n="price_pro">Professional</h3>
                             <p class="is-size-7 has-text-grey mb-1" data-i18n="price_start_from">mulai dari</p>
                             <p class="title is-4 has-text-white mb-5"><span data-i18n="price_pro_val">Rp 15jt</span><span class="is-size-6 has-text-weight-normal has-text-grey" data-i18n="price_period">/proyek</span></p>
-                            <ul class="has-text-white mb-5" style="line-height:2.2;flex:1;">
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_cms">CMS Integration</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_speed">Speed Optimization</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_priority">Priority Support</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_custom_feat">Custom Features</span></li>
+                            <ul class="has-text-white mb-5 is-flex-grow-1" style="line-height:2.2;">
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_cms">CMS Integration</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_speed">Speed Optimization</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_priority">Priority Support</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_custom_feat">Custom Features</span></li>
                             </ul>
                             <button class="btn-glass is-fullwidth open-consultation" data-i18n="btn_choose_package">Choose Package</button>
                         </div>
                     </div>
                     <!-- Enterprise -->
                     <div class="column is-4">
-                        <div class="glass" style="padding:2rem;height:100%;display:flex;flex-direction:column;">
+                        <div class="glass p-5 is-flex is-flex-direction-column" style="height:100%;">
                             <h3 class="title is-5 has-text-white" data-i18n="price_ent">Enterprise</h3>
                             <p class="is-size-7 has-text-grey mb-1" data-i18n="price_start_from">mulai dari</p>
                             <p class="title is-4 has-text-white mb-5">Custom</p>
-                            <ul class="has-text-grey-light mb-5" style="line-height:2.2;flex:1;">
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_mobile">Mobile App Design</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_manager">Dedicated Manager</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_247">24/7 Support</span></li>
-                                <li style="display:flex;align-items:center;gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_unlimited">Unlimited Features</span></li>
+                            <ul class="has-text-grey-light mb-5 is-flex-grow-1" style="line-height:2.2;">
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_mobile">Mobile App Design</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_manager">Dedicated Manager</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_247">24/7 Support</span></li>
+                                <li class="is-flex is-align-items-center" style="gap:8px;"><i data-lucide="check" style="width:16px;height:16px"></i><span data-i18n="feat_unlimited">Unlimited Features</span></li>
                             </ul>
                             <button class="btn-glass is-fullwidth open-consultation" data-i18n="btn_choose_package">Choose Package</button>
                         </div>
@@ -287,14 +287,14 @@
 
         <!-- FAQ Section -->
         <section class="site-section">
-            <div class="container" style="max-width:56rem;">
+            <div class="container is-max-width-56">
                 <div class="has-text-centered mb-6">
                     <h2 class="title is-3 has-text-white" data-i18n="faq_title">Frequently Asked Questions</h2>
                     <p class="subtitle is-5 has-text-grey-light">Answers to commonly asked questions</p>
                 </div>
-                <div style="display:flex;flex-direction:column;gap:1rem;">
-                    <div class="faq-item glass" style="overflow:hidden;border-radius:1rem;">
-                        <button class="faq-button has-text-white has-text-weight-semibold" style="width:100%;padding:1rem 1.5rem;text-align:left;display:flex;justify-content:space-between;align-items:center;background:transparent;border:none;cursor:pointer;">
+                <div class="is-flex-column gap-2">
+                    <div class="faq-item glass is-overflow-hidden is-border-radius-1">
+                        <button class="faq-button">
                             <span data-i18n="faq_q1">What technologies do you use?</span>
                             <span class="faq-icon">+</span>
                         </button>
@@ -302,8 +302,8 @@
                             <p class="has-text-grey-light" data-i18n="faq_a1">We use modern technologies such as React, Vue, Node.js, and Go for development.</p>
                         </div>
                     </div>
-                    <div class="faq-item glass" style="overflow:hidden;border-radius:1rem;">
-                        <button class="faq-button has-text-white has-text-weight-semibold" style="width:100%;padding:1rem 1.5rem;text-align:left;display:flex;justify-content:space-between;align-items:center;background:transparent;border:none;cursor:pointer;">
+                    <div class="faq-item glass is-overflow-hidden is-border-radius-1">
+                        <button class="faq-button">
                             <span data-i18n="faq_q2">How long does a project take?</span>
                             <span class="faq-icon">+</span>
                         </button>
@@ -311,8 +311,8 @@
                             <p class="has-text-grey-light" data-i18n="faq_a2">Most projects take 4-8 weeks depending on complexity.</p>
                         </div>
                     </div>
-                    <div class="faq-item glass" style="overflow:hidden;border-radius:1rem;">
-                        <button class="faq-button has-text-white has-text-weight-semibold" style="width:100%;padding:1rem 1.5rem;text-align:left;display:flex;justify-content:space-between;align-items:center;background:transparent;border:none;cursor:pointer;">
+                    <div class="faq-item glass is-overflow-hidden is-border-radius-1">
+                        <button class="faq-button">
                             <span data-i18n="faq_q3">Do you offer maintenance?</span>
                             <span class="faq-icon">+</span>
                         </button>
@@ -326,10 +326,10 @@
 
         <!-- CTA Section -->
         <section class="site-section">
-            <div class="container has-text-centered" style="max-width:56rem;">
-                <div class="glass" style="padding:3rem;border-radius:1.5rem;">
+            <div class="container has-text-centered is-max-width-56">
+                <div class="glass p-6 is-border-radius-1">
                     <h2 class="title is-3 has-text-white" data-i18n="cta_title">Ready to Start Your Digital Project?</h2>
-                    <p class="subtitle is-5 has-text-grey-light mb-6" style="max-width:36rem;margin-left:auto;margin-right:auto;" data-i18n="cta_desc">Consult your business needs with our expert team. Get the best digital solutions to grow your business.</p>
+                    <p class="subtitle is-5 has-text-grey-light mb-6 mx-auto is-max-width-36" data-i18n="cta_desc">Consult your business needs with our expert team. Get the best digital solutions to grow your business.</p>
                     <button class="btn-primary open-consultation">
                         <i data-lucide="message-circle" style="width:20px;height:20px"></i>
                         <span data-i18n="btn_consultation">Free Consultation Now</span>
@@ -342,13 +342,13 @@
         <footer class="site-footer has-text-centered">
             <div class="container">
                 <div class="mb-5">
-                    <img src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" alt="kewr logo" class="footer-logo" style="margin:0 auto 1rem;">
+                    <img src="images/kewrlogo.png" srcset="images/kewrlogo-1x.png 1x, images/kewrlogo-2x.png 2x" alt="kewr logo" class="footer-logo mx-auto mb-4">
                     <p>&copy; 2026 KEWR Digital. Indonesia. All rights reserved.</p>
                 </div>
-                <div style="display:flex;justify-content:center;gap:1.5rem;">
-                    <a href="https://facebook.com/kewrdigital" class="has-text-grey-light" style="transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="facebook" style="width:20px;height:20px"></i></a>
-                    <a href="https://instagram.com/kewrdigital" class="has-text-grey-light" style="transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="instagram" style="width:20px;height:20px"></i></a>
-                    <a href="https://linkedin.com/in/kewr-digital/" class="has-text-grey-light" style="transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color=''"><i data-lucide="linkedin" style="width:20px;height:20px"></i></a>
+                <div class="is-flex is-justify-content-center gap-3">
+                    <a href="https://facebook.com/kewrdigital" class="footer-social-link"><i data-lucide="facebook" style="width:20px;height:20px"></i></a>
+                    <a href="https://instagram.com/kewrdigital" class="footer-social-link"><i data-lucide="instagram" style="width:20px;height:20px"></i></a>
+                    <a href="https://linkedin.com/in/kewr-digital/" class="footer-social-link"><i data-lucide="linkedin" style="width:20px;height:20px"></i></a>
                 </div>
             </div>
         </footer>

@@ -19,6 +19,18 @@ body { background: #1f2937; color: white; }   /* Bulma defaults: white bg, dark 
 a { color: inherit; }                          /* Bulma sets accent blue */
 a:hover { color: white; }
 h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets colors via vars */
+.has-line-height-tall { line-height: 1.8 !important; }
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.is-flex-column { display: flex !important; flex-direction: column !important; }
+.gap-1 { gap: 0.5rem !important; }
+.gap-2 { gap: 1rem !important; }
+.gap-3 { gap: 1.5rem !important; }
+.gap-4 { gap: 2rem !important; }
+.is-overflow-hidden { overflow: hidden !important; }
+.is-border-radius-1 { border-radius: 1rem !important; }
+.is-max-width-56 { max-width: 56rem !important; }
+.is-max-width-48 { max-width: 48rem !important; }
+.is-max-width-36 { max-width: 36rem !important; }
 
 /* ── Dark gradient page wrapper ── */
 .bg-dark {
@@ -224,6 +236,8 @@ h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets col
     color: rgba(156,163,175,1);
     position: relative; z-index: 1;
 }
+.footer-social-link { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+.footer-social-link:hover { color: white; }
 
 /* ── Consultation modal ── */
 #consultation-modal {
@@ -252,6 +266,12 @@ h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets col
 .modal-textarea:focus { border-color: rgba(255,255,255,0.30); }
 
 /* ── FAQ accordion (padding only — visibility via Bulma's is-hidden/is-open) ── */
+.faq-button {
+    width: 100%; padding: 1rem 1.5rem; text-align: left;
+    display: flex; justify-content: space-between; align-items: center;
+    background: transparent; border: none; cursor: pointer;
+    font-weight: 600; color: white;
+}
 .faq-answer { display: none; padding: 0 1.5rem 1rem; }
 .faq-answer.is-open { display: block; }
 .faq-icon { font-size: 1.25rem; transition: transform 0.3s; }
