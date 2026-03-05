@@ -284,9 +284,14 @@ def inline_icons(content):
         with open(local_path, 'r') as f:
             svg = f.read()
             # Remove Lucide's default width/height and add our attributes
-            # Use negative lookbehind to avoid matching 'stroke-width'
-            svg = re.sub(r'(?<!-)width="[^"]*"', '', svg)
-            svg = re.sub(r'(?<!-)height="[^"]*"', '', svg)
+            # Only target the first <svg tag to avoid stripping attributes from internal elements like <rect>
+            def strip_svg_attrs(svg_match):
+                tag_content = svg_match.group(1)
+                tag_content = re.sub(r'(?<!-)width="[^"]*"', '', tag_content)
+                tag_content = re.sub(r'(?<!-)height="[^"]*"', '', tag_content)
+                return f"<svg{tag_content}"
+
+            svg = re.sub(r'<svg([^>]*)', strip_svg_attrs, svg, count=1)
             svg = svg.replace('  ', ' ').replace(' >', '>') # Cleanup
             
             # Inject extra attributes into the <svg> tag
