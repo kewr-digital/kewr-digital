@@ -397,23 +397,28 @@ def compile_project():
             f.write(content)
         stats['HTML'] += len(content.encode('utf-8'))
 
-    # ── Process JS (With minification) ──
+    # ── Process JS (With minification and translation injection) ──
     js_src = 'js'
     js_dst = os.path.join(dist_dir, 'js')
     os.makedirs(js_dst, exist_ok=True)
+    
+    translations_json = "{}"
+    if os.path.exists('languages.json'):
+        with open('languages.json', 'r') as f:
+            translations_json = json.dumps(json.load(f), separators=(',', ':'))
+
     if os.path.exists(js_src):
         for fname in os.listdir(js_src):
             if fname in ['tailwindcss.js', 'lucide.min.js']: continue
             if fname.endswith('.js'):
                 with open(os.path.join(js_src, fname), 'r') as f:
-                    js_content = minify_js(f.read())
+                    content = f.read()
+                    if fname == 'script.js':
+                        content = f"window.translations={translations_json};{content}"
+                    js_content = minify_js(content)
                 with open(os.path.join(js_dst, fname), 'w') as f:
                     f.write(js_content)
                 stats['JS'] += len(js_content.encode('utf-8'))
-
-    # Copy languages.json
-    if os.path.exists('languages.json'):
-        shutil.copy2('languages.json', os.path.join(dist_dir, 'languages.json'))
 
     # ── Summary ──
     total = sum(stats.values())

@@ -75,10 +75,11 @@ h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets col
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
     position: sticky; top: 0; z-index: 50;
 }
-.site-nav, .site-nav .navbar-item, .site-nav .navbar-link { color: rgba(255,255,255,0.7); background: transparent; }
+.site-nav .navbar-item, .site-nav .navbar-link { color: rgba(255,255,255,0.7); background: transparent; }
 .site-nav .navbar-item:hover, .site-nav .navbar-link:hover { background: rgba(255,255,255,0.10) !important; color: white; }
 .site-nav .navbar-item.is-active-page { color: white; border-bottom: 2px solid white; }
 .site-nav .navbar-burger span { background: rgba(255,255,255,0.8); }
+.site-nav .navbar-brand { background: #1f2937; }
 .site-nav .navbar-menu { background: transparent; }
 @media screen and (max-width: 1023px) {
     .site-nav .navbar-menu { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.10); }
@@ -149,8 +150,8 @@ h1, h2, h3, h4, h5, h6, p, li, span, label { color: inherit; } /* Bulma sets col
 
 /* ── Page sections ── */
 /* 6rem padding — Bulma .section is only 3rem; hero needs full-height flex */
-.site-section { padding: 6rem 1.5rem; position: relative; z-index: 1; }
-.hero-section  { min-height: 100vh; display: flex; align-items: center; position: relative; z-index: 1; }
+.site-section { padding: 2rem 5%; position: relative; z-index: 1; }
+.hero-section { min-height: 100vh; display: flex; align-items: center; position: relative; z-index: 1; padding: 0 5%; }
 
 /* ── Hero headline (Bulma title only goes to is-1 = 3rem) ── */
 .text-hero { font-size: 3rem; font-weight: 800; line-height: 1.1; }

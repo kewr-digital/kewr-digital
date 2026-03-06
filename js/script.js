@@ -33,6 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const langText = document.getElementById('lang-text');
     let translations = {};
     let currentLang = 'EN';
+    let exchangeRate = 16900; // Default fallback
+
+    const fetchExchangeRate = async () => {
+        try {
+            const response = await fetch('https://api.frankfurter.dev/v1/latest?base=USD&symbols=IDR');
+            const data = await response.json();
+            if (data && data.rates && data.rates.IDR) {
+                exchangeRate = data.rates.IDR;
+                console.log(`Exchange rate updated: 1 USD = ${exchangeRate} IDR`);
+                if (currentLang) applyTranslations(currentLang);
+            }
+        } catch (error) {
+            console.error('Failed to fetch exchange rate:', error);
+        }
+    };
 
     const applyTranslations = (lang) => {
         currentLang = lang.toUpperCase();
@@ -44,6 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
+            const basePrice = el.getAttribute('data-base-price');
+
+            // Dynamic currency conversion
+            if (basePrice) {
+                const price = parseFloat(basePrice);
+                if (currentLang === 'EN') {
+                    const usdPrice = Math.round(price / exchangeRate);
+                    el.textContent = `$${usdPrice.toLocaleString('en-US')}`;
+                } else {
+                    const idrPrice = price >= 1000000 ? `${price/1000000}jt` : price.toLocaleString('id-ID');
+                    el.textContent = `Rp ${idrPrice}`;
+                }
+                return;
+            }
+
             if (translations[key] && translations[key][lang.toLowerCase()]) {
                 const translation = translations[key][lang.toLowerCase()];
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -66,6 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const langResponse = await fetch('languages.json');
                 translations = await langResponse.json();
             }
+
+            // Fetch current exchange rate
+            await fetchExchangeRate();
 
             // Check cache
             const cachedLocale = localStorage.getItem('locale');
